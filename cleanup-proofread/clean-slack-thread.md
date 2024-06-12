@@ -17,8 +17,11 @@ Then do the following:
 1. Remove any unnecessary or redundant information such as "edited", "replies", or "pinned a message".
 1. Remove Slack profile picture links.
 1. Add an "Appendix" section at the end of the document with the following information:
-   - The names of the users participating in the thread.
-   - Any acronyms or terms that might need clarification.
+    * The names of the users participating in the thread.
+    * Any acronyms or terms that might need clarification.
+1. Add a "TL;DR" section at the beginning of the document with a brief summary of the thread.
+    * The summary should be concise and capture the main points of the conversation.
+    * The summary should be no more than 3-4 sentences.
 
 While I am open to adjustments, I would like to keep the changes to a minimum, preserving the original structure and the fundamental message as much as possible.
 
