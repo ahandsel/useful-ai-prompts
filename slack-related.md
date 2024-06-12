@@ -1,4 +1,7 @@
-# Clean up a Slack Thread
+# Slack Related AI Prompts
+
+
+## Clean up a Slack Thread
 
 Please help me clean up this Slack thread into a markdown formatted Markdown file.
 
