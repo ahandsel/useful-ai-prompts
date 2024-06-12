@@ -1,5 +1,9 @@
-# Create a zsh script
+# Shell Script Related AI Prompts
 
+
+## Create a zsh script
+
+```md
 Act like an experienced unix shell programmer and help me create a zsh script.
 
 Ensure the following:
@@ -19,3 +23,4 @@ Ensure the following:
 
 Please create a zsh script that does the following:
 1. ...
+```
