@@ -3,6 +3,7 @@
 
 ## Professional Email Response Generator
 
+```md
 Help me write a response to the provided email. Review the email and generate a response.
 
 Important steps to follow:
@@ -13,10 +14,12 @@ Important steps to follow:
 
 Email to respond to:
 ...
+```
 
 
 ## Casual Email Response Generator
 
+```md
 Help me write a response to the provided email. Review the email and generate a response.
 
 Important steps to follow:
@@ -27,10 +30,12 @@ Important steps to follow:
 
 Email to respond to:
 ...
+```
 
 
 ## Assertive Email Response Generator
 
+```md
 Help me write a response to the provided email. Review the email and generate a response.
 
 Important steps to follow:
@@ -41,3 +46,4 @@ Important steps to follow:
 
 Email to respond to:
 ...
+```
