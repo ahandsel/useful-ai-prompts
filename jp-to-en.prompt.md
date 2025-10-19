@@ -1,6 +1,6 @@
 ---
 mode: 'agent'
-model: GPT-4o
+model: GPT-5 mini
 tools: ['changes', 'fetch', 'searchResults', 'editFiles', 'runNotebooks', 'search', 'websearch']
 description: 'Translate Japanese into English.'
 ---
