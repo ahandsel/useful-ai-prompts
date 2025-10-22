@@ -6,8 +6,7 @@ tools:
   - fetch
   - search
   - edit
-  - search
-description: Review and refactor Airtable scripts following best practices while preserving and updating comments.
+description: Review and refactor Airtable scripts using safe, modern JS while preserving and annotating comments.
 ---
 
 # Prompt: Review and Modify Airtable Script
@@ -15,94 +14,82 @@ description: Review and refactor Airtable scripts following best practices while
 
 ## Context
 
-- Workspace: {{workspace name}}
-- Base: {{base name}}
-- Tables/Views used: {{table/view names}}
-- Runtime: {{Scripting App | Automation Script | Custom App}}
-- Goal: {{brief goal}}
-
----
+* Workspace: {{workspace name}}
+* Base: {{base name}}
+* Tables/Views used: {{table/view names}}
+* Runtime: {{Scripting App | Automation Script | Custom App}}
+* Goal: {{brief goal}}
+* Inputs: {{if any, e.g., input.config() keys}}
 
 
 ## Tasks
 
-1. Review code for correctness and Airtable best practices.  
-2. Preserve all existing comments. Update only where inaccurate or unclear. Do not delete author attributions.  
-3. Refactor for clarity, safety, and maintainability.  
-4. Fix bugs and edge cases.  
-5. Return a single revised script and a brief change log.
-
----
+1. Review for correctness and Airtable best practices.
+2. Preserve all existing comments. Update only if inaccurate or unclear. Do not remove author attributions.
+3. Refactor for clarity, safety, and maintainability.
+4. Fix bugs and edge cases without altering intended behavior.
+5. Return one revised script and a brief change log.
 
 
 ## Hard Rules
 
-- Keep comments. Add `// UPDATED:` or `// ADDED:` when you modify or add comments.  
-- Keep behavior the same unless a bug or unsafe pattern is found. If behavior changes, mark with `// BEHAVIOR CHANGE: reason`.  
-- Use modern JS: `const/let`, `async/await`, no `var`.  
-- Validate all external inputs and record fields before use.  
-- Use idempotent operations where possible.  
-- Batch and throttle API calls. Prefer `table.updateRecordsAsync` in chunks of ≤50.  
-- Handle partial failures. Wrap Airtable calls in try/catch.  
-- Avoid blocking loops on network I/O. Use chunked awaits.  
-- Never rely on field position. Refer by field name.  
-- Check for missing tables, views, fields. Fail with clear messages.  
-- No secrets in logs.  
-- Keep line length readable and functions small.
-
----
+* Keep comments. Use `// UPDATED:` or `// ADDED:` for any comment edits or additions.
+* Keep behavior the same unless fixing a bug or unsafe pattern. Mark changes with `// BEHAVIOR CHANGE: reason`.
+* Use modern JS: `const/let`, `async/await`, no `var`, no `await` inside `Array.prototype.forEach`.
+* Validate external inputs and record fields before use.
+* Prefer idempotent operations.
+* Batch writes. Use `table.updateRecordsAsync` in chunks of ≤ 50.
+* Handle partial failures. Wrap Airtable calls in `try/catch` and report which records failed.
+* Avoid blocking loops on network I/O. Process in chunks with sequential `await` per chunk.
+* Never rely on field position. Prefer field names; use field IDs if names are unstable.
+* Check for missing tables, views, and fields. Fail with clear messages.
+* Redact secrets from logs.
+* Keep functions small. Keep line length readable.
 
 
 ## Best-Practice Wishlist
 
-- Small, pure functions with single responsibility.  
-- Config object at top for table/field names and tunables.  
-- Reusable helpers: chunking, safe get, schema guards.  
-- Defensive reads: null/undefined checks.  
-- Dry-run mode with no writes when `CONFIG.DRY_RUN === true`.  
-- Structured logging: `log.info/warn/error` wrappers.  
-- Measured performance: simple timers for critical sections.  
-- Clear exit codes/messages for Automations.
-
----
+* Small, single-purpose functions.
+* `CONFIG` object at top for table/field names and tunables.
+* Reusable helpers: chunking, safe gets, schema guards.
+* Defensive reads: null/undefined checks.
+* Dry-run mode when `CONFIG.DRY_RUN === true`.
+* Structured logging: `log.info`, `log.warn`, `log.error`.
+* Simple timers to measure critical sections.
+* Clear outputs for Automations (set outputs and exit codes where applicable).
+* Query only needed fields to reduce memory: `selectRecordsAsync({ fields: [...] })`.
 
 
 ## Review Checklist
 
-- **Schema safety:** verify tables/fields exist; types match.  
-- **Selectors:** views filtered correctly; queries scoped.  
-- **Rate limits:** batched writes; spacing if needed.  
-- **Error handling:** informative messages; no silent catches.  
-- **Idempotency:** reruns produce the same result.  
-- **Data integrity:** guard against partial updates.  
-- **Edge cases:** empty views, long text, attachments, duplicates.  
-- **Complexity:** reduce nesting; extract helpers.  
-- **Comments:** preserved; updated where misleading; no noise.  
-- **Testing hook:** enable DRY_RUN path and sample inputs.
-
----
+* **Schema safety:** tables/fields exist; expected types.
+* **Selectors:** views and queries scoped and correct.
+* **Rate limits:** batched writes; spacing/backoff if needed.
+* **Error handling:** informative messages; no silent catches.
+* **Idempotency:** safe reruns.
+* **Data integrity:** guard partial updates; only write when changes exist.
+* **Edge cases:** empty views, long text, attachments, duplicates, missing inputs.
+* **Complexity:** reduce nesting; extract helpers.
+* **Comments:** preserved; only clarified where misleading.
+* **Testing hook:** DRY_RUN path and sample inputs.
 
 
 ## Output Format
 
-1. **Revised Script** in one code block.  
-2. **Change Log**: bullet list of key edits and reasons.  
-3. **Assumptions**: any uncertainties you had.  
-4. **Follow-ups**: questions only if blocking.
-
----
+1. **Revised Script** in one code block.
+2. **Change Log**: bullets with key edits and reasons.
+3. **Assumptions**: any uncertainties.
+4. **Follow-ups**: only if blocking.
 
 
 ## House Style
 
-- Use `/** JSDoc */` on exported helpers and complex functions.  
-- Use `//` for inline notes.  
-- Name functions verb-first.  
-- Prefer early returns.  
-- Prefer `for...of` over `forEach` with async.  
-- Chunk helper: `function chunk(arr, n) { ... }`.
-
----
+* Use `/** JSDoc */` on exported helpers and complex functions.
+* Use `//` for inline notes.
+* Function names are verb-first.
+* Prefer early returns.
+* Prefer `for...of` over `forEach` with async.
+* Chunk helper name: `chunk`.
 
 
 ## Sample Helper Stubs
