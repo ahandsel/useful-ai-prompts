@@ -6,7 +6,6 @@ tools:
   - fetch
   - search
   - edit
-  - search
 description: Translate Japanese text into clear, accurate English while preserving formatting and structure.
 ---
 

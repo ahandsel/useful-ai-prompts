@@ -6,7 +6,6 @@ tools:
   - fetch
   - search
   - edit
-  - search
 description: Clean up broken Markdown formatting without changing any words.
 ---
 

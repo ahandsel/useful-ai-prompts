@@ -6,7 +6,6 @@ tools:
   - fetch
   - search
   - edit
-  - search
 description: Generate iCalendar (.ics) files from event descriptions in natural language.
 ---
 
