@@ -1,18 +1,27 @@
 ---
-mode: 'agent'
+mode: agent
 model: GPT-5 mini
-tools: ['changes', 'fetch', 'searchResults', 'editFiles', 'search', 'websearch']
-description: 'Clean up broken Markdown formatting without changing any words.'
+tools:
+  - changes
+  - fetch
+  - search
+  - edit
+  - search
+description: Clean up broken Markdown formatting without changing any words.
 ---
 
 # Clean Up Broken Markdown Formatting
 
 Please clean up the following Markdown file according to the instructions below.
 
+
 ## Task
+
 You are given a Markdown file with broken formatting. Your goal is to clean it **without adding or changing any words**. Only adjust structure and spacing to restore valid Markdown formatting.
 
+
 ### Instructions
+
 1. Review the entire Markdown content provided.
 2. Understand the intended structure and formatting.
 3. Go through the content line by line.
@@ -32,17 +41,20 @@ You are given a Markdown file with broken formatting. Your goal is to clean it *
    7. **Output clean, syntactically valid Markdown.**
 5. Ensure the final output is a single, coherent Markdown document.
 
+
 ### Example
 
 **Input:**
-```
-# T i t l e 
+
+```txt
+# T i t l e
 Thi s i s a
 br oken f i le
 ```
 
 **Output:**
-```
+
+```txt
 # Title
 This is a broken file
 ```

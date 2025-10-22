@@ -1,5 +1,6 @@
 # General Writing Related AI Prompts
 
+
 ## Quick wording check
 
 ```md
