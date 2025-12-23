@@ -1,6 +1,17 @@
+# Secrets
+.env
+.env.tmp
 
-# Temporary files
+# Temporary
+temp
+temp-*
 temp.*
+
+# Dependencies
+/node_modules
+
+# Other
+.DS_Store
 
 # Private files
 private/*
