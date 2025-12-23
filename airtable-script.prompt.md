@@ -1,11 +1,7 @@
 ---
 agent: agent
 model: GPT-5 mini
-tools:
-  - changes
-  - fetch
-  - search
-  - edit
+tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'agent', 'todo']
 description: Review and refactor Airtable scripts using safe, modern JS while preserving and annotating comments.
 ---
 
@@ -116,3 +112,4 @@ function assert(cond, msg) {
 function safeGet(record, field) {
   return record.getCellValue(field) ?? null;
 }
+```

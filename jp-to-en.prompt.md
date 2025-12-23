@@ -37,7 +37,7 @@ Translate the given Japanese text into clear, accurate English suitable while ma
 
 ### Input (Japanese)
 
-```md
+```markdown
 # 会議の概要
 
 この会議では、今後のプロジェクト計画について議論しました。主要な課題は以下の通りです。
@@ -50,7 +50,7 @@ Translate the given Japanese text into clear, accurate English suitable while ma
 
 ### Output (English)
 
-```md
+```markdown
 # Meeting Summary
 
 In this meeting, we discussed the upcoming project plan. The main issues were as follows:
