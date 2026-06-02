@@ -2,19 +2,23 @@
   "name": "useful-ai-prompts",
   "version": "1.0.0",
   "description": "",
-  "scripts": {
-    "code-format": "prettier --write .",
-    "md-lint": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\" --fix",
-    "lint": "pnpm run code-format && pnpm run md-lint"
-  },
   "keywords": [],
-  "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.26.1",
+  "author": "",
+  "scripts": {
+    "lint": "pnpm run lint-code && pnpm run lint-md",
+    "lint-code": "prettier --write .",
+    "lint-md": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\" --fix"
+  },
   "devDependencies": {
     "markdownlint-cli2": "^0.18.1",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "prettier-plugin-autocorrect": "^0.4.3",
+    "prettier-plugin-packagejson": "^3.0.2",
+    "prettier-plugin-sh": "^0.18.1",
+    "prettier-plugin-toml": "^2.0.6"
   },
+  "packageManager": "pnpm@10.26.1",
   "devEngines": {
     "packageManager": {
       "name": "pnpm",

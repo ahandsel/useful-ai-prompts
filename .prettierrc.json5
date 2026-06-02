@@ -3,4 +3,14 @@
   tabWidth: 2,
   useTabs: false,
   singleQuote: true,
+  plugins: [
+    'prettier-plugin-packagejson',
+    'prettier-plugin-sh',
+    'prettier-plugin-toml',
+    'prettier-plugin-autocorrect', // must be last
+  ],
+  overrides: [
+    { files: '**/*.sh', options: { parser: 'sh' } },
+    { files: '**/*.toml', options: { parser: 'toml' } },
+  ],
 }
