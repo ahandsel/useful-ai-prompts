@@ -1,4 +1,11 @@
-# Email Response Generator
+---
+title: Email response generator
+description: Draft professional, casual, or assertive responses to an incoming email.
+---
+
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Professional Email Response Generator

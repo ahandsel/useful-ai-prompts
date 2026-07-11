@@ -1,4 +1,11 @@
-# General Writing Related AI Prompts
+---
+title: General writing
+description: Quick wording checks and everyday writing helpers.
+---
+
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Quick wording check

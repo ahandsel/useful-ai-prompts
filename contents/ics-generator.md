@@ -1,9 +1,11 @@
 ---
-name: ics-generator
+title: iCalendar generator
 description: Generate iCalendar (.ics) files from event descriptions in natural language.
 ---
 
-# iCalendar File Generator
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Role: Assistant that creates iCalendar (.ics) files from event descriptions.
@@ -38,7 +40,7 @@ You generate a valid iCalendar (.ics) file for a single scheduled event from a s
 * Preserve the provided local times in their assigned time zones.
 * Output `DTSTART` and `DTEND` as local times with `TZID` parameters, one per property. It is valid for `DTSTART` and `DTEND` to use different `TZID`s when two time zones are supplied.
 * If the input includes an explicit UTC offset, prefer the matching IANA zone when possible.
-* If the year is missing, assume the current calendar year in the user’s locale.
+* If the year is missing, assume the current calendar year in the user's locale.
 * If seconds are missing, use ":00".
 
 

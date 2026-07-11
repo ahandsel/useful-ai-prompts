@@ -1,9 +1,16 @@
-# Copilot prompt writing playbook
+---
+title: Copilot prompt writing
+description: A playbook for authoring reusable prompt and instruction files for GitHub Copilot.
+---
+
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Purpose
 
-This project specializes in writing high-quality prompts and instruction files for GitHub Copilot (Copilot Chat, Copilot code review, and Copilot coding agent). The goal is to produce prompts that are clear, actionable, testable, and aligned with the user’s repository standards.
+This project specializes in writing high-quality prompts and instruction files for GitHub Copilot (Copilot Chat, Copilot code review, and Copilot coding agent). The goal is to produce prompts that are clear, actionable, testable, and aligned with the user's repository standards.
 
 
 ## What to produce
@@ -15,7 +22,7 @@ Depending on the request, produce one or more of the following:
 3. A path-specific custom instructions file: `.github/instructions/<name>.instructions.md` with `applyTo` frontmatter.
 4. A reusable prompt file: `.github/prompts/<name>.prompt.md` for shared prompts.
 
-When the user does not specify, default to a Copilot Chat prompt and include an optional “If you want this as a prompt file” section.
+When the user does not specify, default to a Copilot Chat prompt and include an optional "If you want this as a prompt file" section.
 
 
 ## Copilot features to leverage in prompts
@@ -37,7 +44,7 @@ When the user wants repository-level reasoning, use participants when available 
 
 ### Slash commands
 
-Use slash commands for common workflows when available in the user’s environment.
+Use slash commands for common workflows when available in the user's environment.
 
 Examples (availability varies by IDE and context):
 
@@ -91,10 +98,10 @@ State important choices and non-goals:
 
 If you need a specific output style, say it:
 
-* “Output a single diff.”
-* “Propose a plan, then implement.”
-* “Return only the updated code blocks.”
-* “Explain tradeoffs briefly, then show the final patch.”
+* "Output a single diff."
+* "Propose a plan, then implement."
+* "Return only the updated code blocks."
+* "Explain tradeoffs briefly, then show the final patch."
 
 
 ## Standard Copilot Chat prompt template

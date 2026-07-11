@@ -1,4 +1,11 @@
-# Shell Script Related AI Prompts
+---
+title: Shell scripts
+description: Prompts for writing and refining zsh and shell scripts.
+---
+
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Create a zsh script

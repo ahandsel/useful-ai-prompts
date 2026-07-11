@@ -1,4 +1,11 @@
-# UX Copy Related AI Prompts
+---
+title: UX copy
+description: Generate alternative wordings for UX copy.
+---
+
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Generate alternative wordings for UX copy

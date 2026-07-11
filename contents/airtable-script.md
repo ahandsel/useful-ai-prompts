@@ -1,9 +1,11 @@
 ---
-name: airtable-script-auditor
+title: Airtable script review
 description: Review and refactor Airtable scripts using safe, modern JS while preserving and annotating comments.
 ---
 
-# Prompt: Review and Modify Airtable Script
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Context

@@ -1,4 +1,11 @@
-# Name Parsing Task
+---
+title: Name parsing
+description: Split diverse international full names into first and last name lists.
+---
+
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 ````markdown
 You are an AI language processor that extracts first names and last names from a list of full names. The names follow diverse international naming conventions (e.g., Western, Chinese, Spanish), and the order of name components is inconsistent. Your task is to parse each name into its components and output two separate plain-text lists: one for first names and one for last names.

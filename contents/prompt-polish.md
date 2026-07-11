@@ -1,12 +1,11 @@
 ---
-name: 'prompt-polish'
-description: 'Enhance and refine a given prompt to improve its clarity, effectiveness, and reliability.'
-agent: 'agent'
-model: 'GPT-5.2'
-tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'agent', 'todo']
+title: Prompt polish
+description: Enhance and refine a given prompt to improve its clarity, effectiveness, and reliability.
 ---
 
-# Review and improve the AI prompt
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Task

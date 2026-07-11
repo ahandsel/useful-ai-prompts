@@ -1,15 +1,11 @@
 ---
-agent: agent
-model: GPT-5 mini
-tools:
-  - changes
-  - fetch
-  - search
-  - edit
+title: Japanese to English
 description: Translate Japanese text into clear, accurate English while preserving formatting and structure.
 ---
 
-# Translate Japanese to English
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Role

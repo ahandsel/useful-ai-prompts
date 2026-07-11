@@ -1,10 +1,11 @@
 ---
-agent: edit
-name: md-format-only-fix
+title: Markdown reformat
 description: Improve the markdown formatting of a given document without changing any wording.
 ---
 
-# Prompt: reformat markdown without changing wording
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 You are given a single markdown document inside a fenced code block. Your task is to improve the formatting only, without changing the wording.
 

@@ -1,15 +1,11 @@
 ---
-agent: agent
-model: GPT-5 mini
-tools:
-  - changes
-  - fetch
-  - search
-  - edit
+title: Markdown cleanup
 description: Clean up broken Markdown formatting without changing any words.
 ---
 
-# Clean Up Broken Markdown Formatting
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 Please clean up the following Markdown file according to the instructions below.
 

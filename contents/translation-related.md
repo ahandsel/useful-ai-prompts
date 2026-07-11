@@ -1,4 +1,11 @@
-# Translation Related AI Prompts
+---
+title: Translation
+description: Translate between languages while preserving formatting and structure.
+---
+
+# {{$frontmatter.title}}
+
+{{$frontmatter.description}}
 
 
 ## Table of Contents <!-- omit in toc -->
