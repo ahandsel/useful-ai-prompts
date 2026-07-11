@@ -1,11 +1,5 @@
 ---
-agent: agent
-model: GPT-5 mini
-tools:
-  - changes
-  - fetch
-  - search
-  - edit
+name: ics-generator
 description: Generate iCalendar (.ics) files from event descriptions in natural language.
 ---
 

@@ -1,7 +1,5 @@
 ---
-agent: agent
-model: GPT-5 mini
-tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'agent', 'todo']
+name: airtable-script-auditor
 description: Review and refactor Airtable scripts using safe, modern JS while preserving and annotating comments.
 ---
 
@@ -10,12 +8,14 @@ description: Review and refactor Airtable scripts using safe, modern JS while pr
 
 ## Context
 
-* Workspace: {{workspace name}}
-* Base: {{base name}}
-* Tables/Views used: {{table/view names}}
-* Runtime: {{Scripting App | Automation Script | Custom App}}
-* Goal: {{brief goal}}
-* Inputs: {{if any, e.g., input.config() keys}}
+* Workspace: [workspace name]
+* Base: [base name]
+* Tables/Views used: [table/view names]
+* Runtime: [Scripting App | Automation Script | Custom App]
+* Goal: [brief goal]
+* Inputs: [if any, e.g., input.config() keys]
+
+If any of the above context is not provided, ask the user for it before proceeding.
 
 
 ## Tasks
