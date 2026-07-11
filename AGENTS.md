@@ -11,11 +11,11 @@ A personal collection of prompts the user reuses with ChatGPT and other LLMs. Pu
 
 ## Common commands
 
-| Command          | What it does                                                              |
-| ---------------- | ------------------------------------------------------------------------- |
+| Command          | What it does                                                                   |
+| ---------------- | ------------------------------------------------------------------------------ |
 | `pnpm lint`      | `lint-code` (Prettier `--write .`) then `lint-md` (markdownlint-cli2 `--fix`). |
-| `pnpm lint-code` | Prettier only.                                                            |
-| `pnpm lint-md`   | markdownlint-cli2 `--fix`.                                                |
+| `pnpm lint-code` | Prettier only.                                                                 |
+| `pnpm lint-md`   | markdownlint-cli2 `--fix`.                                                     |
 
 Run `pnpm lint` before finishing any change so the diff is already formatted.
 

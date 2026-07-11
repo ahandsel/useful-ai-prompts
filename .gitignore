@@ -1,19 +1,39 @@
-# Secrets
-.env
-.env.tmp
-
-# Temporary
-temp
-temp-*
-temp.*
-
 # Dependencies
-/node_modules
+node_modules/
+.pnpm-store/
 
-# Other
-.DS_Store
+# VitePress build output & cache
+**/.vitepress/dist/
+**/.vitepress/cache/
+
+# Logs
+*.log
+markdown-lint-log.txt
+
+# Environment files
+.env
+.env.*
+!.env.example
 
 # Private files
-private/*
+private/
 private-**
 private.*
+
+# Temp files
+temp
+temp.*
+temp-*
+.temp
+*.temp
+**/temp.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+*.suo
+*.sln
+*.sw?
