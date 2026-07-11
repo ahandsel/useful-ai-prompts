@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Browse the prompts
-      link: /prompt-polish.prompt
+      link: /prompt-polish
     - theme: alt
       text: View on GitHub
       link: https://github.com/ahandsel/useful-ai-prompts
@@ -19,7 +19,7 @@ hero:
 features:
   - title: ✨ Prompt Polish
     details: Enhance and refine a prompt to improve its clarity, effectiveness, and reliability
-    link: /prompt-polish.prompt
+    link: /prompt-polish
   - title: 📝 General Writing
     details: Quick wording checks and everyday writing helpers
     link: /general-writing-related
@@ -31,7 +31,7 @@ features:
     link: /translation-related
   - title: 🇯🇵 Japanese to English
     details: Translate Japanese text into clear, accurate English
-    link: /jp-to-en.prompt
+    link: /jp-to-en
   - title: ✉️ Email Response Generator
     details: Draft professional, welcoming responses to incoming email
     link: /email-response-generator
@@ -40,23 +40,23 @@ features:
     link: /slack-related
   - title: 🧹 Markdown Cleanup
     details: Fix broken Markdown formatting without changing any words
-    link: /md-cleanup.prompt
+    link: /md-cleanup
   - title: 🪄 Markdown Reformat
     details: Improve a document's Markdown formatting while keeping the wording intact
-    link: /md-format-only-fix.prompt
+    link: /md-format-only-fix
   - title: 👤 Name Parsing
     details: Split diverse international full names into first and last name lists
     link: /name-parsing
   - title: 📅 iCalendar Generator
     details: Generate .ics files from event descriptions in natural language
-    link: /ics-generator.prompt
+    link: /ics-generator
   - title: 🗂️ Airtable Script Review
     details: Review and refactor Airtable scripts using safe, modern JS
-    link: /airtable-script.prompt
+    link: /airtable-script
   - title: 🐚 Shell Scripts
     details: Prompts for writing and refining zsh and shell scripts
     link: /shell-script-related
   - title: 🤖 Copilot Prompt Writing
     details: A playbook for authoring reusable Copilot prompt files
-    link: /copilot-prompt-writing/copilot-prompt-writing
+    link: /copilot-prompt-writing
 ---
