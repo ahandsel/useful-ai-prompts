@@ -1,27 +1,84 @@
 {
   "name": "useful-ai-prompts",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "license": "ISC",
-  "author": "",
+  "private": false,
+  "description": "A curated collection of AI prompts for ChatGPT, Claude, and other LLMs, with tooling to lint and publish them as a VitePress site.",
+  "keywords": [
+    "ai-prompts",
+    "prompt-engineering",
+    "chatgpt",
+    "claude",
+    "llm",
+    "markdown",
+    "ai-workflows",
+    "AIプロンプト",
+    "プロンプトエンジニアリング",
+    "マークダウン",
+    "AIワークフロー"
+  ],
+  "homepage": "https://github.com/ahandsel/useful-ai-prompts#readme",
+  "bugs": {
+    "url": "https://github.com/ahandsel/useful-ai-prompts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahandsel/useful-ai-prompts.git"
+  },
+  "license": "MIT",
+  "author": "ahandsel",
+  "type": "module",
   "scripts": {
+    "ai": "claude",
+    "build": "vitepress build contents",
+    "check": "pnpm run lint && pnpm run dev",
+    "check-license": "license-manager analyze --config license-manager.config.cjs",
+    "clean": "rm -rf contents/.vitepress/cache contents/.vitepress/dist",
+    "cleanup": "zsh ./scripts/cleanup-temp-files.sh",
+    "dev": "vitepress dev contents",
+    "index": "zsh scripts/index.sh",
     "lint": "pnpm run lint-code && pnpm run lint-md",
     "lint-code": "prettier --write .",
-    "lint-md": "markdownlint-cli2 --config .markdownlint.json \"**/*.md\" \"#node_modules\" --fix"
+    "lint-md": "markdownlint-cli2 --fix",
+    "preview": "vitepress preview contents",
+    "test": "pnpm run lint && pnpm run test-names && pnpm run tree && pnpm run check-license && pnpm run build && pnpm run preview",
+    "test-names": "node skills/file-folder-name-linter/scripts/lint-names.mjs",
+    "test-tree": "node scripts/generate-doc-structure.mjs --check",
+    "tree": "node scripts/generate-doc-structure.mjs",
+    "update-vitepress": "pnpm dlx vp-update",
+    "writing": "pnpm run lint && pnpm run tree && pnpm run dev"
   },
   "devDependencies": {
-    "markdownlint-cli2": "^0.18.1",
-    "prettier": "^3.6.2",
+    "@cybozu/license-manager": "1.4.1",
+    "@prettier/plugin-xml": "^3.4.2",
+    "markdownlint-cli2": "^0.23.0",
+    "markdownlint-rule-relative-links": "^5.1.1",
+    "markdownlint-rule-search-replace": "^1.2.0",
+    "prettier": "^3.9.4",
     "prettier-plugin-autocorrect": "^0.4.3",
     "prettier-plugin-packagejson": "^3.0.2",
+    "prettier-plugin-pkg": "^0.22.1",
     "prettier-plugin-sh": "^0.18.1",
-    "prettier-plugin-toml": "^2.0.6"
+    "prettier-plugin-sql": "^0.20.0",
+    "prettier-plugin-toml": "^2.0.6",
+    "sh-syntax": "^0.6.0",
+    "tree-extended": "^4.6.0",
+    "vitepress": "2.0.0-alpha.17",
+    "vitepress-sidebar": "^1.36.1"
   },
-  "packageManager": "pnpm@10.26.1",
+  "packageManager": "pnpm@11.8.0",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=11"
+  },
   "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": ">=24",
+      "onFail": "error"
+    },
     "packageManager": {
       "name": "pnpm",
+      "version": ">=11",
       "onFail": "error"
     }
   }
