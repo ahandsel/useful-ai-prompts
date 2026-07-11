@@ -7,17 +7,18 @@
 │   │   └───📄 style.css
 │   └───📄 config.mts
 ├───📁 japanese/
-├───📄 airtable-script.prompt.md
+├───📄 airtable-script.md
 ├───📄 copilot-prompt-writing.md
 ├───📄 email-response-generator.md
 ├───📄 general-writing-related.md
-├───📄 ics-generator.prompt.md
+├───📄 hotel-booking-info-extraction.md
+├───📄 ics-generator.md
 ├───📄 index.md
-├───📄 jp-to-en.prompt.md
-├───📄 md-cleanup.prompt.md
-├───📄 md-format-only-fix.prompt.md
+├───📄 jp-to-en.md
+├───📄 md-cleanup.md
+├───📄 md-format-only-fix.md
 ├───📄 name-parsing.md
-├───📄 prompt-polish.prompt.md
+├───📄 prompt-polish.md
 ├───📄 shell-script-related.md
 ├───📄 slack-related.md
 ├───📄 translation-related.md
